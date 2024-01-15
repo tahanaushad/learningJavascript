@@ -15,24 +15,33 @@ function checkMarks() {
   let percentage = (total * 100) / 500;
   document.getElementById("percent").innerHTML = percentage;
 
-  if (percentage > 100) {
-    document.getElementsByClassName("grade").innerHTML = "Marks are invalid";
-  } else if (percentage > 80) {
-    document.getElementsByClassName("grade").innerHTML = "A+";
-  } else if (percentage > 70) {
-    document.getElementsByClassName("grade").innerHTML = "A";
-  } else if (percentage > 60) {
-    document.getElementsByClassName("grade").innerHTML = "B";
-  } else if (percentage > 50) {
-    document.getElementsByClassName("grade").innerHTML = "C";
-  } else if (percentage > 33) {
-    document.getElementsByClassName("grade").innerHTML = "D";
-  } else {
-    document.getElementsByClassName("grade").innerHTML = "Fail";
+  let grade;
+
+    switch (true) {
+      case (percentage > 80):
+        grade = "A+";
+        break;
+      case (percentage > 70):
+        grade = "A";
+        break;
+      case (percentage > 60):
+        grade = "B";
+        break;
+      case (percentage > 50):
+        grade = "C";
+        break;
+      case (percentage > 33):
+        grade = "D";
+        break;
+      default:
+        grade = "Fail";
   }
 
+  document.getElementsByClassName("grade")[0].innerHTML = grade;
+
+
   document.getElementById("hide1").classList.remove("hide");
-  
+
 }
 
 // getElementById("btn").
