@@ -1,27 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <button id="btn" onclick="checkMarks()">Check Your Marks</button>
+    <link rel="stylesheet" href="style.css">
 
+</head>
 
-    <div id="hide1" class="hide">
-    <h1>Your Percentage is</h1>
-    <h1 id="percent">23</h1>
-    <br />
-    <br />
-    <h1>Grade is</h1>
-    <h1 class="grade">A</h1>
+<body>
+
+    <!-- Navbar -->
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+        <li class="searchBar">
+            <input type="text" placeholder="Search.." name="search">
+        </li>
+
+        <li style="float:right"><a class="active" href="#about">About</a></li>
+    </ul>
+
+    <!-- Product List -->
+    <div class="flexContainer">
+
+    <div class="cardList" id="list">
+        <!-- <div class="card1">
+
+            <img class="imgBox"
+                src="https://images.unsplash.com/photo-1705798261243-b6892fd6821f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Error">
+
+            <h3>Tailored Jeans</h3>
+            <p class="price">1250 RS</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="card1">
+
+            <div class="imgBox">
+                <h2>^Image^</h2>
+            </div>
+            <h3>Tailored Jeans</h3>
+            <p class="price">1250 RS</p>
+            <button>Add to Cart</button>
+
+        </div>
+
+        <div class="card1">
+
+            <div class="imgBox">
+                <h2>^Image^</h2>
+            </div>
+            <h3>Tailored Jeans</h3>
+            <p class="price">1250 RS</p>
+            <button>Add to Cart</button>
+
+        </div -->
+
+    </div>
+
+    <div class="cart">
+
+        <h2>Selected Items</h2>
+        <h1 id="cartNumber"></h1>
+        <button id="removeBtn" onclick="removeItem()">Remove Item</button>
+
+    </div>
 </div>
 
+</body>
+<script src="script.js"></script>
 
-
-
-    <script src="script.js"></script>
-  </body>
 </html>

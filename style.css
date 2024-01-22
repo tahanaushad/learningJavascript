@@ -1,3 +1,101 @@
-.hide{
-    visibility: hidden;
-}
+/* Navbar */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #ffa85c;
+  }
+  
+  
+  .searchBar {
+    margin-left: 42%;
+  }
+  
+  .searchBar input {
+    padding: 4%;
+    padding-right: -12%;
+    padding-left: 25%;
+    font-size: 20px;
+  }
+  
+  
+  /* Product List */
+  
+  .cardList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 5px;
+  }
+  
+  
+  .card1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 150px;
+    margin-top: 9px;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .imgBox {
+    border: 1px solid gray;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .price {
+    color: rgb(148, 80, 80);
+    font-size: 18px;
+  }
+  
+  .card1 button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card1 button:hover {
+    opacity: 0.7;
+  }
+  
+  .flexContainer {
+    display: flex;
+  }
+  
+  .cart {
+    margin: 20px;
+    border: 1px solid grey;
+    width: 200px;
+    height: 500px;
+    padding-left: 60px;
+    padding-top: 30px;
+  }
