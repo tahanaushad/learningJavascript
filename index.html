@@ -11,6 +11,7 @@
 
 <body>
 
+
     <!-- Navbar -->
     <nav class="navbar">
         <input type="checkbox" id="check">
@@ -29,7 +30,7 @@
 
     <!-- Sidebar -->
 
-    <div class="sidebar">
+    <!-- <div class="sidebar">
         <div class="menutext">Menu</div>
         <ul>
             <li class="active"><a href="#">Dashboard</a></li>
@@ -56,7 +57,7 @@
             <li><a href="#">Shortcuts</a></li>
             <li><a href="#">Feedback</a></li>
         </ul>
-    </div>
+    </div> -->
 
 
 
@@ -98,12 +99,17 @@
         </div -->
 
         </div>
-        
+
         <div class="cart">
 
+            
             <p class="cartText">Selected Items</p>
+
+            <ul id="cartBill">
+            </ul>
+
             <p class="cartNum" id="cartNumber"></p>
-            <button class="deleteBtn" id="removeBtn" onclick="removeItem()">Remove</button>
+            <button class="deleteBtn" id="removeBtn" onclick="emptyCart()">Empty Cart</button>
 
         </div>
     </div>

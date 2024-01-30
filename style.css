@@ -190,13 +190,15 @@ body {
 
 .cardList {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 60px;
   padding: 30px;
   border: 1px;
 border-radius: 16px;
-  width: 66%;
+  max-width: 800px;
+  height: 400px;
   height: 100%;
   margin-left: 260px;
   margin-top: 20px;
@@ -219,8 +221,16 @@ border-radius: 5px;
 }
 
 .price {
-  color: rgb(148, 80, 80);
+  color: rgb(79, 21, 21);
   font-size: 18px;
+  padding-top: 7px;
+}
+
+.descript {
+padding: 7px;
+  font-size: 13px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 .card1 button {
@@ -263,7 +273,7 @@ color: #145587;
 padding: 5px;
 }
 
-.cartNum {
+/* .cartNum {
   text-align: center;
   margin-top: 35px;
   font-size: 40px;
@@ -275,6 +285,12 @@ padding-top: 14px;
 background-color: #dbe8f1;
 color: #1f1936;
 
+} */
+
+
+#cartBill {
+
+  margin-left: 75px;
 }
 
 .deleteBtn {

@@ -9,6 +9,7 @@ function createProductCard(product) {
     let productPrice = document.createElement("p");
     const buttonEl = document.createElement("button");
     buttonEl.innerHTML = "Add to Cart"
+    let descriptionElm = document.createElement("h3")
 
     card.className = "card1";
     imageDiv.className = "imgBox";
@@ -19,11 +20,18 @@ function createProductCard(product) {
     card.appendChild(productName)
     productPrice.innerText = product.price;
     card.appendChild(productPrice)
+    productPrice.className = "price"
+    descriptionElm.innerText = product.description;
+    card.appendChild(descriptionElm)
+    descriptionElm.className = "descript"
     buttonEl.innerText = "Add to Card";
     buttonEl.id = "addToCartBtn";
-    buttonEl.addEventListener("click", addToCartFn)
+    buttonEl.addEventListener("click", function () {
+        addToCart(product)
+    })
     card.append(buttonEl)
-    
+
+
     return card;
 
 }
@@ -36,23 +44,58 @@ for (let i = 0; i < products.length; i++) {
 
 }
 
-let counter = 0;
+// let counter = 0;
 
-function addToCartFn() {
+// function addToCartFn() {
 
-const cartNum = document.getElementById("cartNumber");
-counter = counter+1; 
-cartNum.innerText = counter ;
+// const cartNum = document.getElementById("cartNumber");
+// counter = counter+1; 
+// cartNum.innerText = counter ;
 
+// }
+
+
+
+function addToCart(product) {
+    let isProductinCart = false;
+    if (cart.length > 0) {
+        for (i = 0; i < cart.length; i++) {
+            console.log(product.id, cart[i].id);
+            if (product.id == cart[i].id) {
+                cart[i].count = cart[i].count + 1;
+                isProductinCart = true;
+                break;
+            } 
+        }
+        if (!isProductinCart) {
+            product.count = 1;
+            cart.push(product)
+        }
+    } else {
+        product.count = 1
+        cart.push(product);
+    }
+
+    renderCartListing()
+    
 }
 
-function removeItem() {
-
-    if (counter > 0) {
-    const cartNum = document.getElementById("cartNumber");
-    counter = counter-1; 
-    cartNum.innerText = counter ;
+function renderCartListing () {
+    const cartBillElm = document.getElementById("cartBill");
+    cartBillElm.innerHTML = "";
+    for(i = 0; i < cart.length; i++){
+        const cartDiv = document.createElement("div")
+        cartDiv.innerHTML = `${cart[i].title} - ${cart[i].count}`
+        cartBillElm.appendChild(cartDiv);
+    }
+    
 }
+
+
+function emptyCart() {
+
+cart = [];
+renderCartListing ();
 }
 
 
